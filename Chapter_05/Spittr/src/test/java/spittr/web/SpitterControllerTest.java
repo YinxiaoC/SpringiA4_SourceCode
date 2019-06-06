@@ -40,7 +40,7 @@ public class SpitterControllerTest {
            .param("password", "24hours")
            .param("email", "jbauer@ctu.gov"))
            .andExpect(redirectedUrl("/spitter/jbauer"));
-    
+    //校验保存情况
     verify(mockRepository, atLeastOnce()).save(unsaved);
   }
 

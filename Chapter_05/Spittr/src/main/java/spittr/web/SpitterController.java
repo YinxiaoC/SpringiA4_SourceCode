@@ -26,8 +26,8 @@ public class SpitterController {
   }
   
   @RequestMapping(value="/register", method=GET)
-  public String showRegistrationForm() {
-    return "registerForm";
+    public String showRegistrationForm() {
+      return "registerForm";
   }
   
   @RequestMapping(value="/register", method=POST)
@@ -37,7 +37,7 @@ public class SpitterController {
     if (errors.hasErrors()) {
       return "registerForm";
     }
-    
+    //forward 请求将会前往（forward）指定的 URL 路径
     spitterRepository.save(spitter);
     return "redirect:/spitter/" + spitter.getUsername();
   }

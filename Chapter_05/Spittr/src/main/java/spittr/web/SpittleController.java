@@ -34,6 +34,7 @@ public class SpittleController {
     return spittleRepository.findSpittles(max, count);
   }
 
+  //addAttribute()不指定key时候， key 会根据值的对象类型推断确定   List<Spittle> --> spittleList
   @RequestMapping(value="/{spittleId}", method=RequestMethod.GET)
   public String spittle(
       @PathVariable("spittleId") long spittleId, 
@@ -42,6 +43,7 @@ public class SpittleController {
     return "spittle";
   }
 
+  //Model 实际上就是一个 Map （也就是 key-value 对的集合）
   @RequestMapping(method=RequestMethod.POST)
   public String saveSpittle(SpittleForm form, Model model) throws Exception {
     spittleRepository.save(new Spittle(null, form.getMessage(), new Date(), 
