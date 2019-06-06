@@ -32,12 +32,13 @@ public class SpitterController {
   
   @RequestMapping(value="/register", method=POST)
   public String processRegistration(
+          //@Valid 确保这个对象满足校验限制
       @Valid Spitter spitter, 
       Errors errors) {
     if (errors.hasErrors()) {
       return "registerForm";
     }
-    //forward 请求将会前往（forward）指定的 URL 路径
+    //forward 请求将会前往（forward）指定的URL路径
     spitterRepository.save(spitter);
     return "redirect:/spitter/" + spitter.getUsername();
   }

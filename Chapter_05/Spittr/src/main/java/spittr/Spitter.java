@@ -10,7 +10,7 @@ import org.hibernate.validator.constraints.Email;
 public class Spitter {
 
   private Long id;
-  
+  //Java 校验 API 定义了多个注解 非空，5到16个字符
   @NotNull
   @Size(min=5, max=16)
   private String username;

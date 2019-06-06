@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="gradle-wrapper">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Chapter_05/Spittr/gradle/wrapper/gradle-wrapper.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Chapter_18/STOMPUser/gradle/wrapper/gradle-wrapper.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -7,6 +7,8 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring3.SpringTemplateEngine;
 import org.thymeleaf.spring3.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
@@ -18,7 +20,7 @@ import org.thymeleaf.templateresolver.TemplateResolver;
 public class WebConfig extends WebMvcConfigurerAdapter {
 
   @Bean
-  public ViewResolver viewResolver(SpringTemplateEngine templateEngine) {
+  public ViewResolver viewResolver(TemplateEngine templateEngine) {
     ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
     viewResolver.setTemplateEngine(templateEngine);
     return viewResolver;

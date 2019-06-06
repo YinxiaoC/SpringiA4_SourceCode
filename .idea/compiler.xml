@@ -6,8 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringiA4_SourceCode" />
+        <module name="main22" />
+        <module name="Chapter_21" />
+        <module name="main3" />
+        <module name="main23" />
+        <module name="main" />
+        <module name="main7" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Chapter_21" target="1.5" />
+      <module name="main" target="1.5" />
+      <module name="main22" target="1.5" />
+      <module name="main23" target="1.5" />
+      <module name="main3" target="1.5" />
+      <module name="main7" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

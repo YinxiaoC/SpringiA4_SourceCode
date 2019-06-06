@@ -24,6 +24,7 @@ public class SpitterWebInitializer extends AbstractAnnotationConfigDispatcherSer
     return new String[] { "/" };
   }
 
+  //设置文件上传路径
   @Override
   protected void customizeRegistration(Dynamic registration) {
     registration.setMultipartConfig(

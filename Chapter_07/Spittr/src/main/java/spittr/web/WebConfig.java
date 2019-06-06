@@ -47,7 +47,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
   public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
     configurer.enable();
   }
-  
+
+  //在spring应用上下文中声明为bean
   @Bean
   public MultipartResolver multipartResolver() throws IOException {
     return new StandardServletMultipartResolver();

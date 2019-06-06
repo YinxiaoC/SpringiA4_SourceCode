@@ -22,11 +22,13 @@
      <flow:flow-location-pattern value="/**/*-flow.xml" />
   </flow:flow-registry>
 
+  <!-- 将请求的 URL 匹配到流程上  -->
   <!--Maps request paths to flows in the flowRegistry-->
   <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
     <property name="flowRegistry" ref="flowRegistry" />
   </bean>
 
+  <!--  相应请求  -->
   <!--
    Dispatches requests mapped to flows to FlowHandler implementations
   -->
